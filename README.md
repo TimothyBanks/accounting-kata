@@ -16,6 +16,9 @@ Public key:  EOS6TzVLNnhLitYdZELXJPjRJ7bDFfXnhGAKsKHBH4biREmwvb5m7
    - cmake ..
    - make
 
+reset && make -j4
+./tests/accounting_test --color_output  --log_level=all -- --verbose
+
 reset && eosio-cpp -abigen accounting.cpp -o accounting/accounting.wasm
 
 cd ~/Work/katas/accounting 
